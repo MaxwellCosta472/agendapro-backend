@@ -13,6 +13,7 @@ import { appointmentRoutes } from './modules/appointments/appointment.routes'
 import { clientRoutes } from './modules/clients/client.routes'
 
 const app = express()
+app.set('trust proxy', 1)
 
 app.use(cors({
   origin: env.FRONTEND_URL,
